@@ -1,8 +1,8 @@
-# Terra 2030 (Terrapoly)
+# Terrapoly 2030 (Terrapoly)
 
-![Terra 2030 Banner](https://via.placeholder.com/1200x400?text=Terra+2030+-+Sustainable+Development+Board+Game)
+![Terrapoly 2030 Banner](https://github.com/Ashmil-Kurikkal/terrapoly/blob/main/logo.png)
 
-**Terra 2030** is a multiplayer, web-based board game that intertwines classic property-trading mechanics with the urgency of the UN's Sustainable Development Goals (SDGs). Players navigate a virtual board, investing their "Impact Points" into global initiatives rather than real estate. The goal is to survive 15 rounds without letting any global SDG category collapse, while competing to be the most impactful investor.
+**Terrapoly 2030** is a multiplayer, web-based board game that intertwines classic property-trading mechanics with the urgency of the UN's Sustainable Development Goals (SDGs). Players navigate a virtual board, investing their "Impact Points" into global initiatives rather than real estate. The goal is to survive 15 rounds without letting any global SDG category collapse, while competing to be the most impactful investor.
 
 ## 🌟 Core Features
 
