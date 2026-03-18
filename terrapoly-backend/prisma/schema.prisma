@@ -1,0 +1,56 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Room {
+  id              String   @id @default(uuid())
+  roomCode        String   @unique // e.g., 4-letter code
+  status          String   @default("WAITING") // WAITING, ACTIVE, FINISHED
+  currentRound    Int      @default(1) // Max 15
+  maxRounds       Int      @default(15)
+  currentTurnIdx  Int      @default(0) // Index of the player array whose turn it is
+  
+  // Category-Wise World SDG Scores (Start at 0, grow toward 100)
+  sdgClimate      Int      @default(0) 
+  sdgEducation    Int      @default(0) 
+  sdgHealth       Int      @default(0) 
+  sdgEnergy       Int      @default(0) 
+  sdgJustice      Int      @default(0) 
+
+  players         Player[]
+  properties      PropertyState[]
+}
+
+model Player {
+  id              String   @id // Provided by frontend (localStorage UUID) for reconnects.
+  roomId          String
+  room            Room     @relation(fields: [roomId], references: [id])
+  socketId        String?  // Nullable for bots
+  name            String
+  impactPoints    Int      @default(200) 
+  position        Int      @default(0) // Board index 0-39
+  isActive        Boolean  @default(true)
+  
+  // Bot AI Fields
+  isBot           Boolean  @default(false)
+  botPersonality  String?  // "Greedy", "Eco-Warrior", "Balanced"
+}
+
+// Tracks ONLY squares that have been bought/interacted with
+model PropertyState {
+  id              String   @id @default(uuid())
+  roomId          String
+  room            Room     @relation(fields: [roomId], references: [id])
+  
+  squareIndex     Int      // 0-39 maps to frontend array
+  ownerId         String   // Relates to Player.id
+  investmentLevel String   @default("SEED") // SEED, FULL, FLAGSHIP
+  bonusReturns    Int      @default(0) 
+
+  @@unique([roomId, squareIndex]) 
+}
