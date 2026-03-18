@@ -4,6 +4,12 @@
 
 **Terrapoly 2030** is a multiplayer, web-based board game that intertwines classic property-trading mechanics with the urgency of the UN's Sustainable Development Goals (SDGs). Players navigate a virtual board, investing their "Impact Points" into global initiatives rather than real estate. The goal is to survive 15 rounds without letting any global SDG category collapse, while competing to be the most impactful investor.
 
+
+https://github.com/user-attachments/assets/d36aac94-7acd-44e9-af63-d636002d7746
+
+
+
+
 ## 🌟 Core Features
 
 - **Multiplayer Lobby System:** Create private rooms, share a 6-character room code, and play with friends in real-time.
