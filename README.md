@@ -86,7 +86,7 @@ cd terrapoly
    ```bash
    npm run dev
    ```
-4. Open your browser and navigate to the local URL provided by Vite (usually `http://localhost:5173`).
+4. Open your browser and navigate to the local URL provided by Vite (usually `http://localhost:5173`)
 
 ## 📁 Repository Structure
 
