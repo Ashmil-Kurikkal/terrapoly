@@ -38,7 +38,6 @@ https://github.com/user-attachments/assets/d36aac94-7acd-44e9-af63-d636002d7746
 - **ORM:** Prisma
 
 ## 🚀 Getting Started
-
 Follow these steps to run the Terra 2030 game locally:
 
 ### 1. Prerequisites
