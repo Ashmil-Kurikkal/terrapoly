@@ -98,8 +98,10 @@ Use the `--host` flag to expose the Vite server to your local network, and ensur
 If you want to test multiplayer features with other devices on your same Wi-Fi network, follow these steps:
 
 Instead of the standard dev command, run Vite with the host flag:
+
 ```bash
 npm run dev -- --host
+```
 
 Vite will now output a Network URL (e.g., http://192.168.1.X:5173). Share this URL with other devices on your network to let them join.
 
