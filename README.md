@@ -88,6 +88,26 @@ cd terrapoly
    ```
 4. Open your browser and navigate to the local URL provided by Vite (usually `http://localhost:5173`)
 
+These steps will let you run the game locally, not exposed to your network, which doesn't allow network devices to join your game room. 
+
+Use the --host flag to expose the Vite server to your local network, and ensure your backend is listening on all network interfaces.
+Here is the markdown you can paste directly after your current text:
+Use the `--host` flag to expose the Vite server to your local network, and ensure your backend is listening on all network interfaces.
+
+### 5. Playing over the Local Network (LAN)
+If you want to test multiplayer features with other devices on your same Wi-Fi network, follow these steps:
+
+Instead of the standard dev command, run Vite with the host flag:
+```bash
+npm run dev -- --host
+
+Vite will now output a Network URL (e.g., http://192.168.1.X:5173). Share this URL with other devices on your network to let them join.
+
+Backend:
+Ensure your backend server is configured to listen on 0.0.0.0 rather than just localhost or 127.0.0.1.
+
+
+
 ## 📁 Repository Structure
 
 ```text
